@@ -14,7 +14,7 @@ cet accord est la vérification principale du projet
 ### Black-Scholes (formule fermée)
 
 Prix exact sous les hypothèses du modèle, obtenu en résolvant analytiquement
-l'espérance risque-neutre actualisée du payoff. Sert de base pour les deux
+l'espérance risque-neutre actualisée du payoff et il sert de base pour les deux
 autres méthodes.
 
 Les cinq grecques sont dérivées analytiquement et confrontées à leurs
