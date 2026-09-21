@@ -4,12 +4,11 @@ from src.black_scholes import bs_price, bs_delta, bs_gamma, bs_vega, bs_theta, b
 from src.binomial import binomial_price
 from src.monte_carlo import mc_price
 
-# Parametres de reference (Hull ch.15)
+
 PARAMS = dict(S=42, K=40, T=0.5, r=0.10, sigma=0.20)
 
 
 def comparer_methodes(option_type="call"):
-    """Affiche les prix des trois methodes, avec temps et intervalles."""
     print(f"\n{'=' * 64}")
     print(f"  Option {option_type.upper()} europeenne")
     print(f"  S={PARAMS['S']}  K={PARAMS['K']}  T={PARAMS['T']}  "
@@ -55,7 +54,6 @@ def comparer_methodes(option_type="call"):
 
 
 def afficher_grecques(option_type="call"):
-    """Affiche les cinq grecques analytiques."""
     print(f"\n{'=' * 64}")
     print(f"  Grecques analytiques ({option_type})")
     print(f"{'=' * 64}\n")
@@ -69,7 +67,6 @@ def afficher_grecques(option_type="call"):
 
 
 def comparer_americain_europeen():
-    """Montre la prime d'exercice anticipe sur un put dans la monnaie."""
     p = dict(S=90, K=100, T=1.0, r=0.05, sigma=0.30)
     eur = binomial_price(**p, n=1000, option_type="put", exercise="european")
     ame = binomial_price(**p, n=1000, option_type="put", exercise="american")
