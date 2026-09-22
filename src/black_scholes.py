@@ -3,7 +3,6 @@ from scipy.stats import norm
 
 
 def bs_price(S, K, T, r, sigma, option_type="call"):
-    """..."""
     if option_type not in ("call", "put"):
         raise ValueError(f"option_type invalide : {option_type}")
     if T <= 0 or sigma <= 0:
